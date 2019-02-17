@@ -28,10 +28,10 @@ def get_filters():
             print("Exception occurred: {}".format(e))
             continue
         if city not in cities:
-            print("Sorry, I didn't understand: {}. Try to type the name of the city more properly.".format(city))
+            print("Sorry, I didn't get: {}. Please type the name of the city more properly.".format(city))
             continue
         if city in cities:
-            print("{} - is a good choise, let's continue.".format(city))
+            print("{} - is a great choise, let's continue.".format(city))
             break
 
 
@@ -220,9 +220,8 @@ def user_stats(df):
 
 def raw_data(df):
     Irow = 0
-    ''' Displays 5 lines of data based on user input.
-        If user wants more data, five more lines of data are displayed
-    '''
+    "Displays 5 lines of data based on user input. IF user wants more data, five more lines of data are displayed"
+
     more_info = input(str('\nDo you want to see raw data? Please type Yes or No!\n'))
     more_info = more_info.strip().lower()
 
