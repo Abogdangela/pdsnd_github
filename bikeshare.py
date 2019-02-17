@@ -17,8 +17,8 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - number of the month to filter by, or "all" to apply no month filter
-        (str) day - number of the day of week to filter by, or "all" to apply no day filter
+        (str) month - number of the month to filter by, or "all" (0) to apply no month filter
+        (str) day - number of the day of week to filter by, or "all" (0) to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -30,10 +30,10 @@ def get_filters():
             print("Exception occurred: {}".format(e))
             continue
         if city not in cities:
-            print("Sorry, I didn't understand: {}. Try to type the name of the city more properly.".format(city))
+            print("Sorry, I didn't get: {}. Please type the name of the city more properly.".format(city))
             continue
         if city in cities:
-            print("{} - is a good choise, let's continue.".format(city))
+            print("{} - is a great choise, let's continue.".format(city))
             break
 
 
@@ -222,9 +222,8 @@ def user_stats(df):
 
 def raw_data(df):
     Irow = 0
-    ''' Displays 5 lines of data based on user input.
-        If user wants more data, five more lines of data are displayed
-    '''
+    "Displays 5 lines of data based on user input. IF user wants more data, five more lines of data are displayed"
+
     more_info = input(str('\nDo you want to see raw data? Please type Yes or No!\n'))
     more_info = more_info.strip().lower()
 
@@ -251,7 +250,7 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nThats\'s was great! Would you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
