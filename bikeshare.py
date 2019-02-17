@@ -15,8 +15,8 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - number of the month to filter by, or "all" to apply no month filter
-        (str) day - number of the day of week to filter by, or "all" to apply no day filter
+        (str) month - number of the month to filter by, or "all" (0) to apply no month filter
+        (str) day - number of the day of week to filter by, or "all" (0) to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -248,7 +248,7 @@ def main():
         user_stats(df)
         raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nThats\'s was great! Would you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
