@@ -5,6 +5,8 @@ import numpy as np
 
 # python bikeshare.py - for convinience to fast launch the script
 
+# Using Python explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. Import the data and answer questions about it by computing descriptive statistics. As well raw input to create an interactive experience in the terminal to present these statistics.
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
